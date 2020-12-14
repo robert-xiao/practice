@@ -1,0 +1,23 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: producer
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 10.62.11.73:9092
+          auto-create-topics: true
+          autoAddPartitions: true
+      bindings:
+        output:
+          destination: cloudstream
+          content-type: text/plain
+        custom-source1: 
+          destination: cloudstream
+          content-type: text/plain
+          producer:
+            partition-key-expression: headers['partitionKey'] 
+            partition-count: 2            
+          
