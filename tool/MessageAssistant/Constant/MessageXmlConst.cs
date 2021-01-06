@@ -24,7 +24,7 @@ namespace MessageAssistant.Constant
         public const String UNIT = "unit";
         public const String REPEAT = "repeat";
         public const String REPEAT_REF = "repeat-ref";
-
+        public const String Default = "default";
         // 值常量
         // 大小端
         public const String ENDIAN_BIG = "big";
@@ -32,6 +32,8 @@ namespace MessageAssistant.Constant
         // 字段长度单位
         public const String UNIT_BIT = "bit";
         public const String UNIT_BYTE = "byte";
+        // 是否跳过
+        public const String SKIP_TRUE = "true";
         // 字段数据类型
         public const String TYPE_BYTE = "byte";
         public const String TYPE_SHORT = "short";

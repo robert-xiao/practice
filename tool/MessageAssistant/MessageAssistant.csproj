@@ -53,6 +53,11 @@
     <Compile Include="MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ComposeFieldModel.cs" />
+    <Compile Include="Model\ComposeFieldRefModel.cs" />
+    <Compile Include="Model\FieldBaseModel.cs" />
+    <Compile Include="Model\FieldModel.cs" />
+    <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MessageDetailFrm.cs">
@@ -89,9 +94,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
