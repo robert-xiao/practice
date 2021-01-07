@@ -12,7 +12,9 @@ namespace MessageAssistant.Constant
         public const String MESSAGE = "message";
         public const String CMD = "cmd";
         public const String FIELD = "field";
-        public const String FIELDS = "fields";
+        public const String COMPOSITE_FIELD = "composite-field";
+        public const String COMPOSITE_FIELD_REF = "composite-field-ref";
+        public const String COMPOSITE_FIELD_FILE = "composite-field-file";
         public const String NAME = "name";
         public const String DESCRIPTION = "description";
         public const String ENDIAN = "endian";
@@ -22,16 +24,19 @@ namespace MessageAssistant.Constant
         public const String OFFSET = "offset";
         public const String SKIP = "skip";
         public const String UNIT = "unit";
-        public const String REPEAT = "repeat";
-        public const String REPEAT_REF = "repeat-ref";
         public const String Default = "default";
+        // 组合字段用到的
+        public const String REPEAT = "repeat"; // 引用常数
+        public const String REPEAT_REF = "repeat-ref"; // 重复次数引用字段
+        public const String REPEAT_FILE = "repeat-file"; // 引用的文件
+
         // 值常量
         // 大小端
         public const String ENDIAN_BIG = "big";
         public const String ENDIAN_LITTLE = "little";
         // 字段长度单位
         public const String UNIT_BIT = "bit";
-        public const String UNIT_BYTE = "byte";
+        public const String UNIT_BYTE = "byte";        
         // 是否跳过
         public const String SKIP_TRUE = "true";
         // 字段数据类型

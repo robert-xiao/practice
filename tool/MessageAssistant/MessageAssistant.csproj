@@ -53,13 +53,19 @@
     <Compile Include="MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ComposeFieldModel.cs" />
-    <Compile Include="Model\ComposeFieldRefModel.cs" />
+    <Compile Include="Model\CompositeFieldModel.cs" />
+    <Compile Include="Model\CompositFieldFileModel.cs" />
+    <Compile Include="Model\CompositFieldRefModel.cs" />
     <Compile Include="Model\FieldBaseModel.cs" />
     <Compile Include="Model\FieldModel.cs" />
+    <Compile Include="Model\FieldReferenceModel.cs" />
     <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IMessageFileParser.cs" />
+    <Compile Include="Service\Impl\MessageFileServiceImpl.cs" />
+    <Compile Include="Util\Assert.cs" />
+    <Compile Include="Util\ExtendFunction.cs" />
     <Compile Include="Views\MessageDetailFrm.cs">
       <SubType>Form</SubType>
     </Compile>

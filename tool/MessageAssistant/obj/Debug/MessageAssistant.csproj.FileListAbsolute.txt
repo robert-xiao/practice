@@ -1,0 +1,10 @@
+E:\code\practice\tool\MessageAssistant\bin\Debug\MessageAssistant.exe.config
+E:\code\practice\tool\MessageAssistant\obj\Debug\MessageAssistant.csprojResolveAssemblyReference.cache
+E:\code\practice\tool\MessageAssistant\obj\Debug\MessageAssistant.MainFrm.resources
+E:\code\practice\tool\MessageAssistant\obj\Debug\MessageAssistant.Properties.Resources.resources
+E:\code\practice\tool\MessageAssistant\obj\Debug\MessageAssistant.Views.MessageDetailFrm.resources
+E:\code\practice\tool\MessageAssistant\obj\Debug\MessageAssistant.csproj.GenerateResource.Cache
+E:\code\practice\tool\MessageAssistant\bin\Debug\MessageAssistant.exe
+E:\code\practice\tool\MessageAssistant\bin\Debug\MessageAssistant.pdb
+E:\code\practice\tool\MessageAssistant\obj\Debug\MessageAssistant.exe
+E:\code\practice\tool\MessageAssistant\obj\Debug\MessageAssistant.pdb
