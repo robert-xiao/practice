@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://10.62.11.71:3306/evcharge_test_v2?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: evlink
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
