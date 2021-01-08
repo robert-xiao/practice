@@ -62,8 +62,8 @@
     <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\IMessageFileParser.cs" />
-    <Compile Include="Service\Impl\MessageFileServiceImpl.cs" />
+    <Compile Include="Service\IMessageModelParser.cs" />
+    <Compile Include="Service\Impl\MessageModelServiceImpl.cs" />
     <Compile Include="Util\Assert.cs" />
     <Compile Include="Util\ExtendFunction.cs" />
     <Compile Include="Views\MessageDetailFrm.cs">

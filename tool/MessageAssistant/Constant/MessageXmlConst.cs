@@ -39,6 +39,7 @@ namespace MessageAssistant.Constant
         public const String UNIT_BYTE = "byte";        
         // 是否跳过
         public const String SKIP_TRUE = "true";
+        public const String SKIP_FALSE = "false";
         // 字段数据类型
         public const String TYPE_BYTE = "byte";
         public const String TYPE_SHORT = "short";
