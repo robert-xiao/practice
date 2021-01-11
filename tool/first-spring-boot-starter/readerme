@@ -1,0 +1,74 @@
+1：在pom文件如下
+<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+    </dependencies>
+	<dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>1.5.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target> 
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+</build>
+2：编写配置类
+@ConfigurationProperties(prefix="first")
+public class FirstProperties {.....
+3：编写服务类
+public class FirstSrv{.......
+4：编写自动配置类
+@Configuration
+@ConditionalOnClass(FirstSrv.class)
+@EnableConfigurationProperties(FirstProperties.class)
+@ConditionalOnProperty(prefix = "first", value = "enabled", matchIfMissing = true)
+public class FirstAutoConfig {
+	@Resource
+	private FirstProperties pro;
+
+	@Bean
+    @ConditionalOnMissingBean
+	public FirstSrv firstSrv(){
+		FirstSrv srv = new FirstSrv();
+。。。。。
+5：在src/main/java/resources新建目录META-INF,在改目录下新建spring.factories文件，内容如：
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.example.user.FirstAutoConfig 自动配置类的全名
+6：mvn 安装 mvn clean install

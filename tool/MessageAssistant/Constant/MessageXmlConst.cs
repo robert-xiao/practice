@@ -25,7 +25,8 @@ namespace MessageAssistant.Constant
         public const String SKIP = "skip";
         public const String UNIT = "unit";
         public const String Default = "default";
-        // 组合字段用到的
+
+        // 组合字段重复次数
         public const String REPEAT = "repeat"; // 引用常数
         public const String REPEAT_REF = "repeat-ref"; // 重复次数引用字段
         public const String REPEAT_FILE = "repeat-file"; // 引用的文件
@@ -48,5 +49,6 @@ namespace MessageAssistant.Constant
         public const String TYPE_UINT = "uint";
         public const String TYPE_ASTRING = "ascii";
         public const String TYPE_CP56TIME = "cp56";
+
     }
 }

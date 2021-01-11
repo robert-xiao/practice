@@ -80,9 +80,20 @@ namespace MessageAssistant.Service.Impl
         {
             CompositeFieldModel model = new CompositeFieldModel();
             ReadFieldBase(e, model);
+            model.Repeat = e.GetAttributeInt(MessageXmlConst.REPEAT);
 
             return model;
         }
+
+        private FieldBaseModel ReadCompositeFieldRef(XmlElement e)
+        {
+            CompositeFieldRefModel model = new CompositeFieldRefModel();
+            ReadFieldBase(e, model);
+            model.RepeatRef = e.GetAttributeEx(MessageXmlConst.REPEAT_REF);
+
+            return model;
+        }
+
 
         private void ReadFieldBase(XmlElement e, FieldBaseModel model)
         {

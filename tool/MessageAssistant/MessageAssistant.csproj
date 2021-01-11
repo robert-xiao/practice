@@ -55,7 +55,7 @@
     </Compile>
     <Compile Include="Model\CompositeFieldModel.cs" />
     <Compile Include="Model\CompositFieldFileModel.cs" />
-    <Compile Include="Model\CompositFieldRefModel.cs" />
+    <Compile Include="Model\CompositeFieldRefModel.cs" />
     <Compile Include="Model\FieldBaseModel.cs" />
     <Compile Include="Model\FieldModel.cs" />
     <Compile Include="Model\FieldReferenceModel.cs" />
