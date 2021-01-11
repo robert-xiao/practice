@@ -9,7 +9,7 @@ namespace MessageAssistant.Model
     /// <summary>
     /// 消息中的字段元素
     /// </summary>
-    abstract class FieldBaseModel
+    abstract class FieldModelBase
     {
         public String Name { get; set; } = "";
         public String Description { get; set; } = "";

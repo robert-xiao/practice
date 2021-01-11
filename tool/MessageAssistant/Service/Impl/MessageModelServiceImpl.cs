@@ -43,7 +43,7 @@ namespace MessageAssistant.Service.Impl
             return model;
         }
 
-        private FieldBaseModel ReadFieldBase(XmlElement e)
+        private FieldModelBase ReadFieldBase(XmlElement e)
         {
             switch (e.Name)
             {
@@ -55,7 +55,7 @@ namespace MessageAssistant.Service.Impl
             return null;
         }
 
-        private FieldBaseModel ReadField(XmlElement e)
+        private FieldModelBase ReadField(XmlElement e)
         {
             FieldModel model = new FieldModel();
             ReadFieldBase(e, model);
@@ -68,7 +68,7 @@ namespace MessageAssistant.Service.Impl
             return model;
         }
 
-        private FieldBaseModel ReadCompositeField(XmlElement e)
+        private FieldModelBase ReadCompositeField(XmlElement e)
         {
             CompositeFieldModel model = new CompositeFieldModel();
             ReadFieldBase(e, model);
@@ -77,7 +77,7 @@ namespace MessageAssistant.Service.Impl
             return model;
         }
 
-        private FieldBaseModel ReadCompositeFieldRef(XmlElement e)
+        private FieldModelBase ReadCompositeFieldRef(XmlElement e)
         {
             CompositeFieldRefModel model = new CompositeFieldRefModel();
             ReadFieldBase(e, model);
@@ -86,7 +86,7 @@ namespace MessageAssistant.Service.Impl
             return model;
         }
 
-        private FieldBaseModel ReadCompositeFieldFile(XmlElement e)
+        private FieldModelBase ReadCompositeFieldFile(XmlElement e)
         {
             throw new NotImplementedException();
             //CompositeFieldFileModel model = new CompositeFieldFileModel();
@@ -96,7 +96,7 @@ namespace MessageAssistant.Service.Impl
             //return model;
         }
 
-        private void ReadFieldBase(XmlElement e, FieldBaseModel model)
+        private void ReadFieldBase(XmlElement e, FieldModelBase model)
         {
             String strEle = e.OuterXml;
             String str = e.GetAttributeEx(MessageXmlConst.FIELD);
@@ -113,9 +113,9 @@ namespace MessageAssistant.Service.Impl
             return;
         }
 
-        private List<FieldBaseModel> ReadChildren(XmlElement e)
+        private List<FieldModelBase> ReadChildren(XmlElement e)
         {
-            List<FieldBaseModel> childrenList = new List<FieldBaseModel>();
+            List<FieldModelBase> childrenList = new List<FieldModelBase>();
             var children = e.ChildNodes;
             for (int i = 0; i < children.Count; ++i)
             {

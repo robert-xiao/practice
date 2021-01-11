@@ -10,7 +10,7 @@ namespace MessageAssistant.Model
     /// <summary>
     /// 消息中具体字段元素
     /// </summary>
-    class FieldModel : FieldBaseModel
+    class FieldModel : FieldModelBase
     {
         public String Endian { get; set; } = MessageXmlConst.ENDIAN_BIG;
         public int Length { get; set; }

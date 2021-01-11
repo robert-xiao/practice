@@ -91,7 +91,7 @@
     <Compile Include="Model\CompositeFieldModel.cs" />
     <Compile Include="Model\CompositeFieldFileModel.cs" />
     <Compile Include="Model\CompositeFieldRefModel.cs" />
-    <Compile Include="Model\FieldBaseModel.cs" />
+    <Compile Include="Model\FieldModelBase.cs" />
     <Compile Include="Model\FieldModel.cs" />
     <Compile Include="Model\FieldReferenceModel.cs" />
     <Compile Include="Model\MessageModel.cs" />

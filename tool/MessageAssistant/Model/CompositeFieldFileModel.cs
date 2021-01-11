@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MessageAssistant.Model
 {
-    class CompositeFieldFileModel : FieldBaseModel
+    class CompositeFieldFileModel : FieldModelBase
     {
         public String FileName { get; set; }
 
-        public List<FieldBaseModel> Children { get; private set; } = new List<FieldBaseModel>();
+        public List<FieldModelBase> Children { get; private set; } = new List<FieldModelBase>();
 
         public override int GetBitLength()
         {

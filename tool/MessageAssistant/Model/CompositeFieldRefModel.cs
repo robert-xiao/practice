@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MessageAssistant.Model
 {
-    class CompositeFieldRefModel : FieldBaseModel
+    class CompositeFieldRefModel : FieldModelBase
     {
         public String RepeatRef { get; set; }
         public int Repeat { get; set; }
-        public List<FieldBaseModel> Children { get; private set; } = new List<FieldBaseModel>();
+        public List<FieldModelBase> Children { get; private set; } = new List<FieldModelBase>();
 
         public override int GetBitLength()
         {
