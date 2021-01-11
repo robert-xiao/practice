@@ -39,15 +39,7 @@ namespace MessageAssistant.Service.Impl
             }
                     
             model.Cmd = e.GetAttributeInt(MessageXmlConst.CMD);
-            var children = e.ChildNodes;
-            for(int i = 0; i < children.Count; ++i)
-            {
-                var child = children[i] as XmlElement;
-                if(child != null)
-                {
-                    model.Fields.Add(ReadFieldBase(child));
-                }
-            }
+            model.Fields.AddRange(ReadChildren(e));
             return model;
         }
 
@@ -81,7 +73,7 @@ namespace MessageAssistant.Service.Impl
             CompositeFieldModel model = new CompositeFieldModel();
             ReadFieldBase(e, model);
             model.Repeat = e.GetAttributeInt(MessageXmlConst.REPEAT);
-
+            model.Children.AddRange(ReadChildren(e));
             return model;
         }
 
@@ -90,10 +82,19 @@ namespace MessageAssistant.Service.Impl
             CompositeFieldRefModel model = new CompositeFieldRefModel();
             ReadFieldBase(e, model);
             model.RepeatRef = e.GetAttributeEx(MessageXmlConst.REPEAT_REF);
-
+            model.Children.AddRange(ReadChildren(e));
             return model;
         }
 
+        private FieldBaseModel ReadCompositeFieldFile(XmlElement e)
+        {
+            throw new NotImplementedException();
+            //CompositeFieldFileModel model = new CompositeFieldFileModel();
+            //ReadFieldBase(e, model);
+            //model.FileName = e.GetAttributeEx(MessageXmlConst.COMPOSITE_FIELD_FILE);
+            //model.Children.AddRange(ReadChildren(e));            
+            //return model;
+        }
 
         private void ReadFieldBase(XmlElement e, FieldBaseModel model)
         {
@@ -110,6 +111,21 @@ namespace MessageAssistant.Service.Impl
                 model.Endian = str;
             }
             return;
+        }
+
+        private List<FieldBaseModel> ReadChildren(XmlElement e)
+        {
+            List<FieldBaseModel> childrenList = new List<FieldBaseModel>();
+            var children = e.ChildNodes;
+            for (int i = 0; i < children.Count; ++i)
+            {
+                var child = children[i] as XmlElement;
+                if (child != null)
+                {
+                    childrenList.Add(ReadFieldBase(child));
+                }
+            }
+            return childrenList;
         }
     }
 }

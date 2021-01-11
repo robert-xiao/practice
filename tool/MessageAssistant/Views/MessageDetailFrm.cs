@@ -16,5 +16,15 @@ namespace MessageAssistant.Views
         {
             InitializeComponent();
         }
+
+        private void btnDecompose_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCompose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

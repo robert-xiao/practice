@@ -54,7 +54,7 @@
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CompositeFieldModel.cs" />
-    <Compile Include="Model\CompositFieldFileModel.cs" />
+    <Compile Include="Model\CompositeFieldFileModel.cs" />
     <Compile Include="Model\CompositeFieldRefModel.cs" />
     <Compile Include="Model\FieldBaseModel.cs" />
     <Compile Include="Model\FieldModel.cs" />
@@ -62,10 +62,16 @@
     <Compile Include="Model\MessageModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\IMessageModelParser.cs" />
+    <Compile Include="Service\IMessageModelService.cs" />
+    <Compile Include="Service\IMessageService.cs" />
     <Compile Include="Service\Impl\MessageModelServiceImpl.cs" />
+    <Compile Include="Service\Impl\MessageService.cs" />
     <Compile Include="Util\Assert.cs" />
+    <Compile Include="Util\Cp56Time2aUtil.cs" />
+    <Compile Include="Util\EnumDescriptionConverter.cs" />
     <Compile Include="Util\ExtendFunction.cs" />
+    <Compile Include="Util\StringConverter.cs" />
+    <Compile Include="Util\WrapMessageBox.cs" />
     <Compile Include="Views\MessageDetailFrm.cs">
       <SubType>Form</SubType>
     </Compile>

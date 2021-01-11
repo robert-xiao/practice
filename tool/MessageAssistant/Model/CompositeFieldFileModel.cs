@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MessageAssistant.Model
 {
-    class CompositFieldFileModel : FieldBaseModel
+    class CompositeFieldFileModel : FieldBaseModel
     {
         public String FileName { get; set; }
 
