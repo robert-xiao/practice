@@ -19,6 +19,8 @@ namespace MessageAssistant.Model
         public double Rate { get; set; } = 1.0;
         public double Offset { get; set; }
         public String Skip { get; set; } = "false";
+        public String DefaultValue { get; set; }
+        public String Value { get; set; }
 
         public override int GetBitLength()
         {

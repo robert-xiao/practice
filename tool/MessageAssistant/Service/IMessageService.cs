@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MessageAssistant.Model;
 
 namespace MessageAssistant.Service
 {
     interface IMessageService
     {
-        void Composite();
-        void Decomposite();
+        String Composite(List<FieldModelBase> fieldList);
+        List<FieldModelBase> Decomposite(String message);
     }
 }
